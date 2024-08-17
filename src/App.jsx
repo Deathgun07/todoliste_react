@@ -1,23 +1,23 @@
-import { useState } from 'react';
-import { Input } from './forms.jsx';
+import { useState } from 'react'
+import { Input } from './forms.jsx'
 
 function App() {
-  const [tasks, setTasks] = useState([]); // Initialement, la liste des tâches est vide
-  const [newTask, setNewTask] = useState(''); // Pour capturer la nouvelle tâche
+  const [tasks, setTasks] = useState([]) 
+  const [newTask, setNewTask] = useState('')
 
   // Fonction pour ajouter une tâche
   const addTask = () => {
     if (newTask) {
-      setTasks([...tasks, newTask]);
-      setNewTask(''); // Réinitialiser l'input après ajout
+      setTasks([...tasks, newTask])
+      setNewTask('') // Réinitialiser l'input après ajout
     }
   };
 
 
   // Fonction pour supprimer une tâche
   const removeTask = (taskToRemove) => {
-    setTasks(tasks.filter(task => task !== taskToRemove));
-  };
+    setTasks(tasks.filter(task => task !== taskToRemove))
+  }
 
   return (
     <div>
